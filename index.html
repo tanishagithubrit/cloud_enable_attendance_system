@@ -3,21 +3,26 @@
 <head>
   <title>Admin Dashboard</title>
   <link rel="stylesheet" href="style.css">
+  <script>
+    function toggleProfileFeatures() {
+  const profileIcon = document.getElementById('profileIcon'); // Replace 'profileIcon' with your actual ID
+  const featureList = document.getElementById('featureList'); // Replace 'featureList' with your actual ID
+
+  // Toggle the visibility of the feature list
+  featureList.style.display = featureList.style.display === 'none' ? 'block' : 'none';
+}
+  </script>
 </head>
 <body>
   <header>
-<div class="profile-dropdown">
-        <button class="profile-button">
-          <img src="profile photo.jpg" alt="Profile Icon" height="50" width="50">
-        </button>
-        <ul class="dropdown-menu">
-          <li><a href="#">Profile</a></li>
-          <li><a href="#">Settings</a></li>
-          <li><a href="#">Logout</a></li>
-        </ul>
-      </div>
-  </header>
-
+<button id="profileIcon" onclick="toggleProfileFeatures()">
+  <img src="profile photo.png" alt="Profile Icon">
+</button>
+<ul id="featureList" style="display: none;">
+  <li>Profile</li>
+  <li>Settings</li>
+  <li>Logout</li>
+</ul>
   <main>
     <h1>Welcome to the Admin Dashboard</h1>
     <a href="register_student.html" class="register-button">Register Student</a>
